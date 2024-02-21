@@ -14,8 +14,8 @@ public class bukuMain16 {
         bk1.gantiHarga(60000);
         bk1.tampilInformasi();
 
-        buku16 bk2 = new buku16("Slef Reward", "Maheera Ayesha", 160, 29, 59000);
-        bk2.terjual(11);
+        buku16 bk2 = new buku16("Hidup Sehat", "Firmansyah", 179, 59, 99000);
+        bk2.terjual(59);
         bk2.tampilInformasi();
     }
 }
