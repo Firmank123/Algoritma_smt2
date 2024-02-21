@@ -8,7 +8,7 @@ public class buku16 {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
         System.out.println("Halaman: " + halaman);
-        System.out.println("Sisa stok: " + judul);
+        System.out.println("Sisa stok: " + stok);
         System.out.println("Harga: " + harga);
     }
 
