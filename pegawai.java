@@ -1,11 +1,13 @@
 package kuis1;
 
+import java.util.Scanner;
+
 public class pegawai {
     String nama;
     int masaKerjaThn, gajiPokok;
-    double tunjangan, gajiTotal;
-    double gajiLembur;
-    double jamLembur;
+    double jamLembur, tunjangan, gajiTotal, gajiLembur;
+
+    Scanner sc = new Scanner(System.in);
 
     public pegawai() {
 
@@ -17,7 +19,7 @@ public class pegawai {
         } else if (masaKerjaThn > 5) {
             gajiLembur=jamLembur*(0.10*gajiPokok);
         }
-        return 0;
+        return gajiLembur;
     }
 
     double hitungTunjangan() {
@@ -26,12 +28,12 @@ public class pegawai {
         } else if (masaKerjaThn > 5) {
             tunjangan=0.50*gajiPokok;
         }
-        return 0;
+        return tunjangan;
     }
 
     double hitungGajiTotal() {
         gajiTotal=gajiPokok + gajiLembur + tunjangan;
-        return gajiLembur;
+        return gajiTotal;
     }
 
     void printData() {
