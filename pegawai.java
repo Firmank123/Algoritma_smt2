@@ -37,6 +37,8 @@ public class pegawai {
     }
 
     void printData() {
-        System.out.println("Gaji total anda adalah: " +gajiTotal);
+        System.out.println("Gaji lembur: " +hitungGajiLembur());
+        System.out.println("Tunjangan: " +hitungTunjangan());
+        System.out.println("Gaji total: " +hitungGajiTotal());
     }
 }
