@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class pegawai {
     String nama;
     int masaKerjaThn, gajiPokok;
-    double jamLembur, tunjangan, gajiTotal, gajiLembur;
+    double jamLembur, tunjangan, gajiTotal, gajiLembur, gajiTotalRata, terbesar;
 
     Scanner sc = new Scanner(System.in);
 

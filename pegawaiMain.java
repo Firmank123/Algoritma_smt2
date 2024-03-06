@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class pegawaiMain {
     public static void main(String[] args) {
+        double terbesar;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("==============================");
         System.out.print("Masukkan Jumlah Pegawai: ");
         int x = sc.nextInt();
+        pegawai pgw = new pegawai();
         pegawai[] pg = new pegawai[x];
 
         for (int i = 0; i < pg.length; i++) {
@@ -23,6 +25,8 @@ public class pegawaiMain {
             System.out.print("Masukkan Gaji Pokok Pegawai: ");
             pg[i].gajiPokok = sc.nextInt();
             System.out.println("==============================");
+
+
         }
 
         for (int i = 0; i < pg.length; i++) {
@@ -31,6 +35,7 @@ public class pegawaiMain {
             pg[i].hitungGajiTotal();
         }
 
+        
         for (int i = 0; i < pg.length; i++) {
             System.out.println("==============================");
             System.out.println("Nama pegawai: " +pg[i].nama);
@@ -39,7 +44,24 @@ public class pegawaiMain {
             System.out.println("Gaji Pokok: " +pg[i].gajiPokok);
             pg[i].printData();
             System.out.println("==============================");
+
+            if (pg[i].masaKerjaThn > 5) {
+                pgw.gajiTotalRata += pg[i].gajiTotal/pg.length;
+            }
+
+            terbesar = x;
+            if (pg[i].masaKerjaThn < 5) {
+                if (pg[i].gajiLembur > terbesar) {
+                    terbesar = pg[i].gajiLembur;
+                }
+            }    
+
+            pgw.terbesar = pg[i].gajiLembur;
         }
+
+        System.out.println("Rata-rata Gaji Total: " +pgw.gajiTotalRata);
+        System.out.println("Gaji Lembur terbesar: " +pgw.terbesar);
+
         sc.close();
     }
 }
